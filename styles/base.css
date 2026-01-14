@@ -70,16 +70,17 @@ nav, p, section {
 	list-style: none;
 	display: flex;
 	flex-wrap: wrap;
-	background-color: var(--accent1-color);
+	background-color:var(--accent1-color);
     justify-content: space-around;
 	align-items: center;
-    margin: 16px;
+    margin: 1rem;
+    padding: 13px;
     
 }
 
 .navigation a {
 	display: block;
-	color: #eee;
+	color: #fff;
     font-size: 1.2rem;
 	padding: 0.5rem;
 	text-decoration: none;

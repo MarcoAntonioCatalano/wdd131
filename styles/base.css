@@ -127,11 +127,13 @@ article {
     display: grid;
     grid-template-columns: 1fr 1fr; 
     gap: 1.5rem;
-    background-color: var(--secondary-color);
+    background-color: #fff;
     color: #333;
+    border: 2px solid var(--secondary-color);
     padding: var(--base-padding);
     margin-top: 1rem;
     align-items: center;
+    border-radius: 5px;
 }
 
 article img {
@@ -154,8 +156,8 @@ article.history-section {
     align-items: center;    
     gap: 20px;                 
     padding: var(--base-padding);
-    background-color: var(--secondary-color);
-    border-radius: 8px;
+    background-color: #fff;
+    border-radius: 5px;
     margin-bottom: 2rem;
 }
 
@@ -241,10 +243,6 @@ footer {
   padding: var(--base-padding); 
   grid-column: 1 / 5;
   justify-items: center;
-}
-
-.highlight {
-    color: var(--accent1-color);
 }
 
 .date-list {

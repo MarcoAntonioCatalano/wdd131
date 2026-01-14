@@ -9,8 +9,6 @@
     --primary-color: #DBEBE9;   
     --secondary-color: #B8D9D6;     
     --accent1-color: #0D9488;      
-    --heading-font: "Times New Roman", "Georgia", serif;
-    --body-font: Arial, Helvetica, sans-serif;
     --text-on-dark: #fff;           
     --base-padding: 0.5rem;           
 }
@@ -19,15 +17,18 @@ body {
     margin: 0;
     display: grid;
     min-height: 100vh; 
-    font-family: var(--body-font);
+    font-family: "Barlow", sans-serif;
+    font-weight: 300;
+    font-style: normal;
     grid-template-rows: auto 1fr auto;
     grid-template-columns: 1fr 560px 280px 1fr; 
 }
 
-header, footer {
+header {
     width: 100%;
     margin: 0 auto;
-    font-size: 2rem;
+    font-weight: 500;
+    font-size: x-large;
     text-align: center;
 }
 
@@ -37,6 +38,7 @@ h1, h2 {
 	background-color:var(--accent1-color);
 	padding: 0.5rem;
 	color: #fff;
+    font-weight: 300;
     width: 100%;
     border-radius: 8px;
 }
@@ -79,8 +81,6 @@ nav, p, section {
 	display: block;
 	color: #eee;
     font-size: 1.2rem;
-    font-weight: 700;
-    font-weight: bold;
 	padding: 0.5rem;
 	text-decoration: none;
 	text-align: center;
@@ -89,7 +89,6 @@ nav, p, section {
 }
 
 .navigation a:hover {
-	font-weight: 700;
 	text-decoration: none;
 	background-color: #095751;
     border-radius: 8px;
@@ -218,7 +217,7 @@ main h2, .right-sidebar h2 {
     text-align: center;
     padding: 0.8rem;
     border-radius: 6px;
-    font-weight: bold;
+    font-weight: normal;
     transition: all 0.3s ease;
     border: 2px solid transparent;
 }
@@ -237,8 +236,7 @@ main h2, .right-sidebar h2 {
 
 footer {
   display: grid;
-  font-family: monospace; 
-  font-size: 1rem;
+  font-weight: 300;
   background-color: #0D9488;
   padding: var(--base-padding); 
   grid-column: 1 / 5;
@@ -247,16 +245,13 @@ footer {
 
 .highlight {
     color: var(--accent1-color);
-    font-weight: bold;
 }
 
 .date-list {
     list-style: none;
     padding: 0;
-    font-family: monospace; 
 }
 
 .date-list li {
     margin-top: 5px;
-    font-size: 1rem;
 }

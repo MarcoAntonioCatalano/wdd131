@@ -19,9 +19,9 @@ body {
     min-height: 100vh; 
     font-family: "Barlow", sans-serif;
     font-weight: 300;
-    font-style: normal;
+    /* Changed from fixed pixels to flexible fractions and max-widths */
     grid-template-rows: auto 1fr auto;
-    grid-template-columns: 1fr 560px 280px 1fr; 
+    grid-template-columns: minmax(10px, 1fr) minmax(300px, 560px) minmax(200px, 280px) minmax(10px, 1fr); 
 }
 
 header {
@@ -175,6 +175,7 @@ article.history-section p {
     color: black;               
     line-height: 1.6;
 }
+
 
 /* -------------- */
 

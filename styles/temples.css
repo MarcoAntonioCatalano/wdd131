@@ -78,28 +78,6 @@ body {
     font-weight: 600;
 }
 
-.navigation {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	list-style: none;
-	background-color: #333;
-	color: #fff;
-}
-
-.navigation a {
-	display: none;
-	padding: 1rem;
-	text-align: center;
-	text-decoration: none;
-	color: #fff;
-}
-.navigation a:hover {
-	background-color: #bbb;
-	color: #333;
-	font-weight: 700;
-}
-
 .logo.hide {
     display: none;
 }
@@ -162,6 +140,7 @@ body {
 
     .nav-list.open {
         display: flex;
+        text-align: center;
     }    
     .card img { 
         width: 100%; 

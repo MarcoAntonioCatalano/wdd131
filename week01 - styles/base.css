@@ -108,6 +108,7 @@ body {
     background-color: #fff;
     border-radius: 5px; 
     padding: var(--base-padding);
+    flex-direction: row-reverse;
 }
 
 .bio-img {

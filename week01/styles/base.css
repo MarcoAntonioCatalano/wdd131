@@ -15,152 +15,34 @@
 
 /* Default Body (Mobile First) */
 body {
-    margin: 0;
-    display: grid;
-    min-height: 100vh;
-    font-family: "Barlow", sans-serif;
-    grid-template-rows: auto auto 1fr auto; /* Stack everything */
-    grid-template-columns: 1fr; 
+  margin: 0;
 }
 
-/* Desktop Body */
-@media only screen and (min-width: 40em) {
-    body {
-        grid-template-columns: minmax(10px, 1fr) minmax(300px, 560px) minmax(200px, 280px) minmax(10px, 1fr);
-    }
+.web-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 1rem;
 }
 
-h1 {
-	font-size: 1rem;
-	padding: 1rem;
-	background-color: #000;
-	color: #fff;
-	text-align: center;
-}
-
-p {
-	margin: 1rem;
-	border: 1px solid rgb(0 0 0 /0.1);
-	padding: 0.5rem;
-
-}
-/* Mobile View ***************/
-#menu {
-	display: block;
-	font-size: 2rem;
-	font-weight: 700;
-	text-decoration: none;
-	padding: 0.5rem 0.75rem;
-	background-color: black;
-	color: var(--text-on-dark);
-}
-
-#menu::before {
-	content: "≡";
-}
-
-nav {
-	background-color: var(--secondary-color);
-
-}
-.navigation {
-	list-style: none;
-	margin: 0 auto;
-	max-width: 760px;
-}
-
-.navigation li {
-	display: none;
-}
-.navigation a {
-	display: block;
-	padding: 0.75rem;
-	text-align: left;
-	text-decoration: none;
-	color: var(--text-on-dark);
-	font-weight: 700;
-	transition: 0.5s;
-	font-size: clamp(1rem, 2vmin, 1.5rem);
-}
-
-.navigation a:hover,
-.navigation a:active {
-	color: white;
-	background-color:var(--accent1-color);
-    border-radius: 5px;
-}
-
-.show li {
-	display: block;
-}
-
-#menu.show::before {
-	content: "X";
-}
-
-/* Media Query for wider than mobile viewports. Breakpoint should be based upon the design and content and use em units to be relative to the user's font size versus fixed with pixels.  
-
-In most WDD courses there is a requirement to use a separate file. This part would go into a separate CSS file. 
-*/
-@media only screen and (min-width: 40em) {
-	h1 {
-		font-size: 2rem;
-	}
-	.navigation {
-		display: flex;
-	}
-	.navigation li {
-		display: block; /* change state in small view */
-		flex: 1 1 100%;
-	}
-	.navigation a {
-		text-align: center;
-	}
-	#menu {
-		display: none;
-	}
-}
-
-
-header {
-    width: 100%;
-    margin: 0 auto;
-    font-weight: 500;
-    font-size: x-large;
+.main-title {
     text-align: center;
 }
 
-
-h1, h2 {
-	text-align: center;
-	background-color:var(--accent1-color);
-	padding: 0.5rem;
-	color: #fff;
-    font-weight: 300;
-    width: 100%;
-    border-radius: 8px;
-}
-
-nav {
+.navbar {
+    padding: 0.5rem 1rem;
 	margin: 0 auto 2rem;
 	max-width: 90vw;
 }
-
-header {
-  background:var(--accent1-color);
-  color: #fff;
-  width: 100%;
-  height: 150px;
-  padding: 1rem;
-  grid-column: 1 / -1;
-  margin: 0;
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
 }
-nav, p, section {
-    padding: 0.5rem;
-    margin: 1rem 0; 
-}
-
-
 
 main {
     width: 100%; 
@@ -170,9 +52,9 @@ main {
     background-color: var(--primary-color);
 }
 
-section {
+.card {
   text-align: center; 
-  padding: 8px;
+  padding: var(--base-padding);
 }
 
 
@@ -181,7 +63,7 @@ article {
     grid-template-columns: 1fr 1fr; 
     gap: 1.5rem;
     background-color: #fff;
-    color: black;
+    color: #555;
     border: 2px solid var(--secondary-color);
     padding: var(--base-padding);
     margin-top: 1rem;
@@ -240,20 +122,6 @@ article.history-section p {
     grid-column: 3 / 4;
 }
 
-.right-sidebar h2 {
-    margin-top: 0; 
-}
-
-main, .right-sidebar {
-    padding-top: 1rem;
-
-}
-
-main h2, .right-sidebar h2 {
-    margin-top: 0;
-    margin-bottom: 1rem; 
-}
-
 .resource-list {
     list-style: none;
     padding: 0;
@@ -289,19 +157,12 @@ main h2, .right-sidebar h2 {
     transform: translateY(0);
 }
 
-
-footer {
-  display: grid;
-  height: 100px;
-  font-weight: 300;
-  color: #fff;
-  background-color: var(--accent1-color);
-  padding: var(--base-padding); 
-  grid-column: 1 / 5;
-  justify-items: center;
-}
-
-.highlight {
+.site-footer {
+    grid-column: 1 / -1; 
+    background-color: var(--accent1-color);
     color: #fff;
-    font-weight: 700;
+    text-align: center;
+    padding: var(--base-padding);
+
 }
+

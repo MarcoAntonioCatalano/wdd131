@@ -17,7 +17,6 @@
 <body>
     <header class="web-header">
     <a href="#" class="logo">WDD - Dynamic Web Fundamentals</a>
-    <button type="button" id="menu"></button>
     <nav class="navbar">
 	<ul class="nav-list">
 		<li><a href="https://linkedin.com" title="linkedin">Linkedin</a></li>
@@ -27,12 +26,12 @@
 	</ul>
 </nav>
     </header>
-    <main contenteditable>
+    <main class="container">
     <h1 class="main-title">Marco Antonio Catalano</h1>
     <section class="card">
-        <h2>About me</h2>
-         <article>
-                <img src="week01 - images/leia.jpg" alt="Sitting with my friend's dog Leia on my lap" width="200">
+        <h2 class="intro-title">About me</h2>
+         <article class="bio">
+                <img src="week01 - images/leia.jpg" alt="Sitting with my friend's dog Leia on my lap" class="bio-img">
                 <p>Hi everyone, my name is Marco. I'm originally from Argentina, but I currently live in Orem, Utah. I have a background in Interior Design. In my free time, I love to play sports and travel around.
                 </p>
             </article>
@@ -51,9 +50,8 @@
     </p>
 </article>
     </section>
-    </main>
     <aside class="right-sidebar">
-    <h2>Web Dev Resources</h2>
+    <h2 class="resources-title">Web Dev Resources</h2>
     <ul class="resource-list">
         <li><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></li>
         <li><a href="https://css-tricks.com/">CSS-Tricks</a></li>
@@ -61,6 +59,7 @@
         <li><a href="https://www.frontendmentor.io/">Frontend Mentor</a></li>
     </ul>
     </aside>
+    </main>
 <footer class="site-footer">
     <p>&copy; <span id="time"></span> | Marco Catalano | Utah</p>
     <p id="lastModified"></p>

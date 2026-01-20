@@ -12,9 +12,21 @@
     --text-on-dark: #fff;           
     --base-padding: 0.5rem;           
 }
+.barlow-light {
+  font-family: "Barlow", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.barlow-medium {
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
 
 body {
   margin: 0;
+  font-family: barlow, sans-serif;
 }
 
 .web-header {

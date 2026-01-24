@@ -35,7 +35,7 @@ body {
 
 .logo {
     width: 100%;
-    font-size: 1.7rem;
+    font-size: 2rem;
     font-weight: bold;
     color: var(--text);
     text-decoration: none;
@@ -43,11 +43,12 @@ body {
     background-color: var(--secondary-color);
     text-align: center;
 }
+.page-title {
+    display: none;
+}
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr
-    
-
 }
 .hero {
   position: relative;

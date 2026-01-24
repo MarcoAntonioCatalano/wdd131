@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="week03/styles/place.css">
+    <script src="week03/scripts/place.js" defer></script>
+    <title>WDD 131 - Dynamic Web Fundamentals - Marco Antonio Catalano</title>
+    <meta name="description" content="marco-antonio-catalano, dynamic web-fundamentals, web-development.">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;500&family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="web-header">
+    <a href="#" class="logo">Thailand</a>
+    </header>
+    <main class="container">
+        <div class="hero">
+            <picture>
+                <source media="(min-width: 1000px)" srcset="week03/images/floating-market-thailand-large.webp">
+                <source media="(min-width: 500px)" srcset="week03/images/floating-market-thailand-medium.webp">
+                <img src="week03/images/floating-market-thailand-small.webp" alt="Floating Market, Thailand" width="500" height="250">
+            </picture>
+        </div>
+       <div class="card"> 
+        <h2 class="data">Data</h2> 
+        
+        <div class="info-item"> 
+            <div class="label">Area:</div> 
+            <div class="value">513,120 km²</div> 
+        </div> 
+        <div class="info-item"> 
+            <div class="label">Population:</div> 
+            <div class="value">≈ 71.5 million</div> 
+        </div> 
+        <div class="info-item"> 
+            <div class="label">Capital:</div> 
+            <div class="value">Bangkok</div> 
+        </div> 
+        <div class="info-item"> 
+            <div class="label">Languages:</div> 
+            <div class="value">Thai</div> 
+        </div> 
+        <div class="info-item"> 
+            <div class="label">Currency:</div> 
+            <div class="value">Thai Baht (THB)</div> 
+        </div> <div class="info-item"> 
+            <div class="label">Time Zone:</div> 
+            <div class="value">UTC+7</div> 
+        </div> 
+        <div class="info-item"> 
+            <div class="label">Calling Code:</div> 
+            <div class="value">+66</div> 
+        </div> 
+        <div class="info-item"> 
+            <div class="label">Internet TLD:</div> 
+            <div class="value">.th</div> 
+        </div> 
+    </div>
+     <div class="card-weather"> 
+        <h2 class="weather-title">Weather 
+        <img src="week03/images/sunny-icon.svg" alt="Sunny" class="weather-icon"> </h2> 
+        
+        <div class="info-item"> 
+            <div class="label">Temperature:</div> 
+            <div class="value">90°F</div> 
+        </div> 
+        <div class="info-item"> 
+            <div class="label">Condition:</div> 
+            <div class="value">MostlySunny</div> 
+        </div> 
+        <div class="info-item"> 
+            <div class="label">Wind:</div> 
+            <div class="value">10 km/h</div> 
+        </div> 
+        <div class="info-item"> 
+            <div class="label">Humidity:</div> 
+            <div class="value">70%</div>
+        </div> 
+    </div>
+        
+        
+    </main>
+    <footer class="site-footer">
+    <p>&copy; <span id="time"></span> | Marco Catalano | Utah</p>
+    <p id="lastModified"></p>
+</footer>
+</body>
+</html>

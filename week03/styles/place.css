@@ -1,0 +1,133 @@
+* {
+	margin: 0;
+	padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+    
+    --primary-color: #DBEBE9;   
+    --secondary-color: #B8D9D6;     
+    --accent1-color: #0D9488;      
+    --text-on-dark: #fff;           
+    --base-padding: 0.5rem;           
+}
+.barlow-light {
+  font-family: "Barlow", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.barlow-medium {
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+body {
+  font-family: barlow, sans-serif;
+}
+.web-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo {
+    width: 100%;
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #222;
+    text-decoration: none;
+    padding: 1.5rem;
+    background-color: var(--secondary-color);
+    text-align: center;
+}
+.container {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  backdrop-filter: brightness(60%);
+  inset: 0;
+}
+
+.card {
+    text-align: left;
+    background-color: var(--primary-color);
+    opacity: 0.75;
+    padding: 1rem;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+    border-radius: 8px;
+    position: absolute;
+    gap: .25rem;
+}
+.data {
+   text-align: center;
+   padding: var(--base-padding);
+   position: relative;
+   background-color: var(--secondary-color);
+   top: -25px;
+   left: 50%;
+   transform: translateX(-50%);
+    border-radius: 8px;
+   
+}
+.info-item {
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: auto auto;
+}
+
+.label{
+  text-align: left;
+}
+.value {
+  font-weight: bold;
+  text-align: right;
+}
+
+.card-weather {
+    background-color: var(--primary-color);
+    opacity: 0.75;
+    padding: 1rem;
+    right: 10%;
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+    border-radius: 8px;
+    position: absolute;
+    gap: .25rem;
+}
+.weather-title {
+   text-align: center;
+   padding: var(--base-padding);
+   position: relative;
+   background-color: var(--secondary-color);
+   top: -25px;
+   left: 50%;
+   transform: translateX(-50%);
+   border-radius: 8px;
+   
+}
+.weather-icon {
+    width: 40px;
+    height: 40px;
+}
+.site-footer { 
+    background-color: var(--secondary-color);
+    color: #222;
+    text-align: center;
+    padding: 1.5rem;
+}

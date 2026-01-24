@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="week03/styles/place.css">
+    <link rel="stylesheet" href="week03/styles/place-large.css">
+    <script src="week03/scripts/place-weather.js" defer></script>
     <script src="week03/scripts/place.js" defer></script>
     <title>WDD 131 - Dynamic Web Fundamentals - Marco Antonio Catalano</title>
     <meta name="description" content="marco-antonio-catalano, dynamic web-fundamentals, web-development.">
@@ -14,6 +16,12 @@
 <body>
     <header class="web-header">
     <a href="#" class="logo">Thailand</a>
+        <button 
+        id="menu"
+        aria-label="Menu"
+        aria-controls="primary-navigation"
+        aria-expanded="false">
+    </button>
     </header>
     <main class="container">
         <div class="hero">
@@ -60,24 +68,25 @@
     </div>
      <div class="card-weather"> 
         <h2 class="weather-title">Weather 
-        <img src="week03/images/sunny-icon.svg" alt="Sunny" class="weather-icon"> </h2> 
+        </h2> 
         
         <div class="info-item"> 
             <div class="label">Temperature:</div> 
-            <div class="value">90°F</div> 
+            <span class="weather-temp">--</span>
         </div> 
         <div class="info-item"> 
             <div class="label">Condition:</div> 
-            <div class="value">MostlySunny</div> 
+            <span class="weather-desc">--</span>
         </div> 
         <div class="info-item"> 
             <div class="label">Wind:</div> 
-            <div class="value">10 km/h</div> 
+            <span class="weather-wind">--</span> 
         </div> 
         <div class="info-item"> 
             <div class="label">Humidity:</div> 
-            <div class="value">70%</div>
+            <span class="weather-humidity">--</span>
         </div> 
+        <img class="weather-icon" src="week03/images/sunny-icon.svg" alt="">
     </div>
         
         

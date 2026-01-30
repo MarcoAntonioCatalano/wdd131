@@ -22,6 +22,8 @@ hamButton.addEventListener('click', () => {
     document.querySelector('.logo').classList.toggle('hide');
 });
 
+
+
 const temples = [
   {
     templeName: "Aba Nigeria",
@@ -79,23 +81,83 @@ const temples = [
     imageUrl:
     "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
   },
-  {
-    templeName: "Palmyra, New York",
-    location: "Palmyra, New York",
-    dedicated: "2000, April, 6",
-    area: 10900,
-    imageUrl:
-    "https://churchofjesuschristtemples.org/templesldsorg/bc/Temples/phpto-galleries/palmyra-new-york/400x250/palmyra-new-york-temple-17437-wallpaper.jpg"
-  },
-  {
-    templeName: "Sapporo, Japan",
-    location: "Sapporo, Japan",
-    dedicated: "2016, August, 21",
-    area: 48480,
-    imageUrl:
-    "https://churchofjesuschristtemples.org/templesldsorg/bc/Temples/phpto-galleries/sapporo-japan/400x250/sapporo-japan-temple-65780-wallpaper.jpg"
-  }
-
-
-  // Add more temple objects here...
+ 
 ];
+
+createTempleCard(temples);
+
+const old = document.querySelector("#old");
+
+old.addEventListener("click", () => {
+    createTempleCard(
+        temples.filter(temple => {
+            const year = parseInt(temple.dedicated.split(",")[0]);
+            return year < 1900;
+        })
+    );
+});
+
+const newer= document.querySelector("#newer");
+
+newer.addEventListener("click", () => {
+    createTempleCard(
+        temples.filter(temple => {
+            const year = parseInt(temple.dedicated.split(",")[0]);
+            return year > 2000;
+        })
+    );
+});
+
+const large = document.querySelector("#large");
+
+large.addEventListener("click", () => {
+    createTempleCard(temples.filter(temple => temple.area > 90000));
+});
+
+const small = document.querySelector("#small");
+
+small.addEventListener("click", () => {
+    createTempleCard(temples.filter(temple => temple.area < 10000));
+});
+
+const allTemples = document.querySelector("#allTemples");
+
+allTemples.addEventListener("click", () => {
+    createTempleCard(temples);
+});
+
+
+
+
+function createTempleCard(filteredTemples) {
+    document.querySelector(".res-grid").innerHTML = "";
+    filteredTemples.forEach(temple => {
+        let card = document.createElement("section");
+        let name = document.createElement("h3");
+        let location = document.createElement("p");
+        let dedication = document.createElement("p");
+        let area = document.createElement("p");
+        let img = document.createElement("img");
+     
+        name.textContent = temple.templeName;
+        location.innerHTML = `<span class="label">Location:</span> ${temple.location}`;
+        dedication.innerHTML = `<span class="label">Dedicated</span> ${temple.dedicated}`;
+        area.innerHTML = `<span class="label">Size:</span> ${temple.area}sq ft`;
+        
+        img.setAttribute("src", temple.imageUrl);
+        img.setAttribute("alt", `${temple.templeName} Temple`);
+        img.setAttribute("loading", "lazy");
+
+        card.appendChild(name);
+        card.appendChild(location);
+        card.appendChild(dedication);
+        card.appendChild(area);
+        card.appendChild(img);
+
+        document.querySelector(".res-grid").appendChild(card);
+
+
+
+    });
+
+}

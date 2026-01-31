@@ -13,7 +13,19 @@
     --base-padding: 0.5rem;           
 }
 
+.barlow-light {
+  font-family: "Barlow", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.barlow-medium {
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
 body {
+  font-family: "Barlow", sans-serif;
   margin: 0;
 }
 
@@ -21,7 +33,7 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     padding: 1rem;
 }
 .logo {
@@ -88,17 +100,20 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     background-color: var(--primary-color);
-    text-align: center;
+    min-height: 82vh;
 }
 
-section {
+
+
+.res-grid section {
   margin: 0;
+  border-radius: 8px;
+  background-color: var(--primary-color);
   text-align: center;
-  margin-top: 0.5rem;
   font-weight: 500;
   color: #333;
   font-size: 0.9rem; 
-  line-height: 1.3;
+
 }
 
 section img {
@@ -106,8 +121,11 @@ section img {
     height: auto;
     max-width: 400px;
     object-fit: cover;
+    border-radius: 8px;
+    opacity: 0; 
+    transition: opacity 1s ease-out;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.70);
 }
-
 
 
 
@@ -115,8 +133,7 @@ section img {
 .site-footer {
     text-align: center;
     padding: 1rem;
-    background-color: var(--primary-color);
-    margin-top: 2rem;
+    background-color: var(--secondary-color);
     font-size: 0.9rem;
     color: #555;
 }
@@ -125,6 +142,29 @@ section img {
 @media (max-width: 600px) {
     .res-grid {
         grid-template-columns: 1fr;
+    }
+    .nav-list { 
+        display: none; 
+        flex-direction: column; 
+        gap: 1rem; 
+        background-color: var(--secondary-color); 
+        padding: 1rem; 
+        width: 100%; 
+        text-align: center; 
+    }
+    .nav-list.open { display: flex; 
+    }
+}
+
+@media (min-width: 600px) {
+    #menu {
+        display: none;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
     }
 }
 

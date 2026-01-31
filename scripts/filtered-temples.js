@@ -148,6 +148,8 @@ function createTempleCard(filteredTemples) {
         img.setAttribute("alt", `${temple.templeName} Temple`);
         img.setAttribute("loading", "lazy");
 
+        img.addEventListener("load", () => { img.style.opacity = "1"; });
+
         card.appendChild(name);
         card.appendChild(location);
         card.appendChild(dedication);

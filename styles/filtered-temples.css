@@ -126,6 +126,12 @@ section img {
     transition: opacity 1s ease-out;
     box-shadow: 0 4px 12px rgba(0,0,0,0.70);
 }
+section p {
+  padding-bottom: var(--base-padding);
+}
+section h3 {
+    padding: var(--base-padding);
+}
 
 
 

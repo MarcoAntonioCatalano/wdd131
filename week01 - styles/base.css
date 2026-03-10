@@ -37,7 +37,15 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: var(--base-padding);
+}
+.logo {
+    width: 250px;
+    height: auto;
+    padding: 1rem;
+}
+.logo a:hover {
+    transform: scale(1.5);
+
 }
 
 .navbar {

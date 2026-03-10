@@ -49,16 +49,18 @@ body {
     margin: 0;
     padding: 0;
     justify-content: center;
-    font-size: 1.1rem;
+    font-size: 20px;
 }
 .nav-list a {
-    color: #333;
+    color: var(--text-on-dark);
+    padding: var(--base-padding);
+    border-radius: 8px;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.5s ease;
+    background-color: var(--secondary-color);
 }
 .nav-list a:hover {
-    color: var(--secondary-color);
-    font-weight: bold;
+    font-size: larger;
 
 }
 

@@ -37,16 +37,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: var(--secondary-color);
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--text-on-dark);
 }
-.logo {
-    width: 250px;
-    height: auto;
-    padding: 1rem;
-}
-.logo a:hover {
-    transform: scale(1.5);
 
-}
+
 
 .navbar {
     padding: 1rem;
@@ -75,7 +72,9 @@ body {
     font-weight: 500;
 }
 .nav-list a:hover {
-    font-size: larger;
+   padding: var(--base-padding);
+   background-color: var(--accent1-color);
+   color: var(--secondary-color);
 
 }
 
